@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_player_sheet-2.png-a8742d5a3472b7a2be1a5ed2dea282b2.stex"
+path="res://.import/jumping_player_up.png-a576ca0d9ec930a3e4074bb04252fccd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://idle_player_sheet-2.png"
-dest_files=[ "res://.import/idle_player_sheet-2.png-a8742d5a3472b7a2be1a5ed2dea282b2.stex" ]
+source_file="res://assets/sprites/characters/hero/jumping_player_up.png"
+dest_files=[ "res://.import/jumping_player_up.png-a576ca0d9ec930a3e4074bb04252fccd.stex" ]
 
 [params]
 

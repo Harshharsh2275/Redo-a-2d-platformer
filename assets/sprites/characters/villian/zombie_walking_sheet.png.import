@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/running_player_sheet.png-2c7737c1e600e605bad56028dcabc445.stex"
+path="res://.import/zombie_walking_sheet.png-4e15b2571ff6cba8686a288eeebcfd30.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://running_player_sheet.png"
-dest_files=[ "res://.import/running_player_sheet.png-2c7737c1e600e605bad56028dcabc445.stex" ]
+source_file="res://assets/sprites/characters/villian/zombie_walking_sheet.png"
+dest_files=[ "res://.import/zombie_walking_sheet.png-4e15b2571ff6cba8686a288eeebcfd30.stex" ]
 
 [params]
 

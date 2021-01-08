@@ -45,10 +45,15 @@ func _get_h_weight() -> float:
 	
 func _assign_animation():
 	var anim = "player_idle"
-	if velocity.x != 0:
+	if !is_grounded:
+		anim = "player_jumping"
+	elif velocity.x != 0:
 		anim = "player_running"
-	else:
-		anim = "player_idle"
 	if body.get_child(0).animation != anim:
 		print($Body/AnimatedSprite.animation)
 		body.get_child(0).play(anim)
+
+
+func _on_zombie_kill_player():
+	self.queue_free()
+	pass 

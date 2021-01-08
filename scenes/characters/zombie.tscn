@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/sprites/characters/villian/zombie_walking_sheet.png" type="Texture" id=1]
+[ext_resource path="res://scripts/characters/zombie.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 300, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 600, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 900, 0, 300, 300 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1200, 0, 300, 300 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "zombie_running",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 12.6887, 32.8772 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 14.9305, 31.9789 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 17.3091, 22.4652 )
+
+[node name="zombie" type="KinematicBody2D"]
+position = Vector2( 619.426, 274.357 )
+collision_layer = 2147483649
+collision_mask = 2147483649
+script = ExtResource( 2 )
+speed = 100
+
+[node name="Body" type="Node2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Body"]
+scale = Vector2( 0.32, 0.32 )
+frames = SubResource( 6 )
+animation = "zombie_running"
+frame = 1
+speed_scale = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -3.38347, 3.10168 )
+shape = SubResource( 7 )
+
+[node name="KillArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillArea"]
+position = Vector2( -4.75677, 2.37842 )
+shape = SubResource( 8 )
+
+[node name="AttackArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2( 20.8111, 0.594604 )
+shape = SubResource( 9 )
+[connection signal="body_entered" from="KillArea" to="." method="_on_KillArea_body_entered"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_AttackArea_body_entered"]

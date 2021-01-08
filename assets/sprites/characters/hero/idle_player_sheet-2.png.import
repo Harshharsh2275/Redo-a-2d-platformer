@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Game_main_character_atlas.png-708900c737059e1b80e83f94d858ee6b.stex"
+path="res://.import/idle_player_sheet-2.png-a106628fa3bae44066a2a5b3a34f65ce.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game_main_character_atlas.png"
-dest_files=[ "res://.import/Game_main_character_atlas.png-708900c737059e1b80e83f94d858ee6b.stex" ]
+source_file="res://assets/sprites/characters/hero/idle_player_sheet-2.png"
+dest_files=[ "res://.import/idle_player_sheet-2.png-a106628fa3bae44066a2a5b3a34f65ce.stex" ]
 
 [params]
 
