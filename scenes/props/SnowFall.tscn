@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="Curve" id=1]
+min_value = -40.0
+max_value = 40.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.0652921, 2.45454 ), -5.03896, -5.03896, 0, 0, Vector2( 0.175258, 0.272728 ), 0.0, 0.0, 0, 0, Vector2( 0.24055, 3.18182 ), -6.61366, -6.61366, 0, 0, Vector2( 0.381443, -0.454544 ), 0.0, 0.0, 0, 0, Vector2( 0.484536, 1.72727 ), -5.03896, -5.03896, 0, 0, Vector2( 0.563574, 1.72727 ), 0.0, 0.0, 0, 0, Vector2( 0.621993, -1.18182 ), -43.4126, -43.4126, 0, 0, Vector2( 0.690722, -0.454544 ), 0.0, 0.0, 0, 0, Vector2( 0.738832, 1.45454 ), 6.76744, 6.76744, 0, 0, Vector2( 0.828179, 0.272728 ), -8.46545, -8.46545, 0, 0, Vector2( 0.883162, 2.45454 ), -10.5818, -10.5818, 0, 0, Vector2( 0.965636, 2.45454 ), 0.0, 0.0, 0, 0, Vector2( 1, 1.72727 ), 0.0, 0.0, 0, 0 ]
+
+[node name="SnowFall" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( 536, -40 )
+emitting = false
+amount = 25
+lifetime = 10.0
+randomness = 1.0
+emission_shape = 2
+emission_rect_extents = Vector2( 540, 1 )
+gravity = Vector2( 0, 40 )
+tangential_accel_curve = SubResource( 1 )
+scale_amount = 9.0
+scale_amount_random = 1.0
