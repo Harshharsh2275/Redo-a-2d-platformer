@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Game_main_character_atlas.png" type="Texture" id=1]
+
+[node name="CharacterRig" type="Node2D"]
+
+[node name="Torso" type="Sprite" parent="."]
+
+[node name="Head" type="Sprite" parent="Torso"]
+position = Vector2( -5.33936, 0 )
+scale = Vector2( 1.16685, 1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 256, 128, 128 )
+
+[node name="LeftArm" type="Sprite" parent="Torso"]
+
+[node name="LeftThigh" type="Sprite" parent="Torso"]
+
+[node name="LeftLeg" type="Sprite" parent="Torso/LeftThigh"]
+
+[node name="RightThigh2" type="Sprite" parent="Torso"]
+
+[node name="RightLeg" type="Sprite" parent="Torso/RightThigh2"]
