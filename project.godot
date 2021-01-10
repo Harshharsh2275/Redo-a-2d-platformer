@@ -16,13 +16,15 @@ _global_script_class_icons={
 [application]
 
 config/name="Redo"
-run/main_scene="res://scenes/world/level.tscn"
+run/main_scene="res://Menu/selected_buton.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=1920
 window/size/height=1080
+window/size/test_width=960
+window/size/test_height=540
 window/stretch/mode="viewport"
 
 [input]
